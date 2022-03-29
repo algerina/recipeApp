@@ -6,3 +6,4 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 recipe1 = Recipe.create(name: "Tuna salad", preparation_time: 13, cooking_time: 0, description: 'Put all the ingredients together', public: true )
+recipe2 = Recipe.create(name: "Tuna salad", preparation_time: 13, cooking_time: 0, description: 'Put all the ingredients together', public: true )
