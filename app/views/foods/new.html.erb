@@ -1,0 +1,23 @@
+<h1>New food</h1>
+
+
+<%= form_with model: @foods, url: new_food_path do |f| %>
+
+     <div>
+
+      <%= f.label :name, "Name" %>
+      <%= f.text_field :name, required: true %>
+
+      <%= f.label :measurement_unit, "Measurement Unit" %>
+      <%= f.text_field :measurement_unit, required: true %>
+
+      <%= f.label :price, "Price" %>
+      <%= f.text_field:price, required: true %>
+
+      
+    </div>
+    <%= f.submit "Publish"%>
+
+  </div>
+  
+<% end %>
