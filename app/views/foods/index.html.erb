@@ -1,0 +1,22 @@
+<h1>Foods</h1>
+
+ 
+<%@foods.each do |food|%>
+
+<table>
+<tr>
+  <th>Food</th>
+  <th>Measurement Unit</th>
+  <th>Unit Price</th>
+  <th>Actions</th>
+</tr>
+<tr>
+  <td> <p><%= food.name %></p></td>
+  <td> <p><%= food.measurement_unit %></p></td>
+  <td> <p><%= food.price %></p></td>
+</tr>
+
+</table>
+
+<%end%> 
+
