@@ -1,0 +1,14 @@
+<h1>New food</h1>
+
+
+<div>
+  <%= form_with(model: @food, url: foods_path, method: :post, local: true) do |form| %>
+    <%= form.label(:name, "name") %>
+    <%= form.text_field :name %>
+     <%= form.label(:measurement_unit, "measurement unit?") %>
+    <%= form.text_field :measurement_unit %>
+    <%= form.label(:price, "price") %>
+    <%= form.text_field :price %>
+    <%= form.submit "Add food" %>
+  <% end %>
+</div>

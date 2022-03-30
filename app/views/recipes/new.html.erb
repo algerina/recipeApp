@@ -1,0 +1,15 @@
+<div>
+  <%= form_with(model: @recipe, url: recipes_path, method: :post, local: true) do |form| %>
+    <%= form.label(:name, "name") %>
+    <%= form.text_field :name %>
+     <%= form.label(:preparation_time, "Preparation time") %>
+    <%= form.text_field :preparation_time %>
+    <%= form.label(:cooking_time, "cooking time") %>
+    <%= form.text_field :cooking_time %>
+     <%= form.label(:description, "description") %>
+    <%= form.text_area :description %>
+    <%= form.radio_button :public, 'Public?' %> 
+  <%= form.label :public, 'public', :value => 'public' %>
+    <%= form.submit "Add Recipe" %>
+  <% end %>
+</div>
