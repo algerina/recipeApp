@@ -16,7 +16,7 @@ class RecipesController < ApplicationController
                          cooking_time: recipe_params[:cooking_time],
                          description: recipe_params[:description], public: recipe_params[:public])
     if @recipe.valid? && @recipe.save
-      redirect_to root_path
+      redirect_to user_recipes_path
     else
       render :new
     end
@@ -25,7 +25,7 @@ class RecipesController < ApplicationController
   def destroy
     @recipe = Recipe.find(params[:id])
     @recipe.destroy!
-    redirect_to root_path
+    redirect_to user_recipes_path
   end
 
   private

@@ -15,7 +15,7 @@ class FoodsController < ApplicationController
     @food = Food.new(name: food_params[:name], price: food_params[:price],
                      measurement_unit: food_params[:measurement_unit])
     if @food.valid? && @food.save
-      redirect_to foods_path
+      redirect_to user_recipe_foods_path
     else
       render :new
     end
@@ -24,7 +24,7 @@ class FoodsController < ApplicationController
   def destroy
     @food = Food.find(params[:id])
     @food.destroy!
-    redirect_to foods_path
+    redirect_to user_recipe_foods_path
   end
 
   private
