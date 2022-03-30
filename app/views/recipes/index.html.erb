@@ -1,7 +1,8 @@
 <h1>Recipes</h1>
 
- 
+ <button><%= link_to ("Add a recipe"), new_recipe_path(@recipes)%></button>
 <%@recipes.each do |recipe|%>
     <p><%= recipe.name %></p>
     <p><%=recipe.description%></p>
+    <p><%=  button_to "Delete Recipe", "/recipes/#{recipe.id}", method: :delete,  data: { confirm: 'Are you sure you want to delete this topic?' } %></p>
 <%end%> 
