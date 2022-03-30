@@ -1,0 +1,29 @@
+<h1>add ingredients</h1>
+ <%@foods.each do |food|%>
+  <div>
+          <%= form.label :quantity, class: 'font-medium block mb-2' %>
+          <%= form.number_field :quantity, class: 'border rounded' %>
+        </div>
+        <%end%>
+
+<div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+    Dropdown button
+  </button>
+  <%@foods.each do |food|%>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+  
+    <li>
+  
+    <a class="dropdown-item" href="#"><p> <%=food.name%></p></a>
+    </li>
+   
+  </ul>
+</div>
+
+<%end%>
+<br>
+<br>
+<br>
+
+<%= button_to "Add ingredient" %>
