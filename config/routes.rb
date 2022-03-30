@@ -1,8 +1,12 @@
 Rails.application.routes.draw do
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
- resources :recipes 
- resources :foods 
-
+resources :users do
+ resources :recipes  do
+ resources :foods  do
+ resources :inventories
+ end
+ end
+end
  get 'home', to: 'static#home'
 
 

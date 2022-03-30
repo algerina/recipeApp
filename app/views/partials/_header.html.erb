@@ -10,10 +10,10 @@
           <a class="nav-link active" aria-current="page" href="#">Inventory</a>
         </li>
         <li class="nav-item">
-        <%= link_to 'Food' ,foods_path, class: "nav-link"%>
+        <%= link_to 'Food' ,user_recipe_foods_path(:recipe_id, :food_id), class: "nav-link"%>
         </li>
         <li class="nav-item">
-        <%= link_to 'My Recipies' ,recipes_path, class: "nav-link"%>
+        <%= link_to 'My Recipies' ,user_recipes_path(:user_id), class: "nav-link"%>
         </li>
         <li class="nav-item">
           <a class="nav-link">Public Recipies</a>
