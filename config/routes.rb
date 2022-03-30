@@ -3,6 +3,9 @@ Rails.application.routes.draw do
  resources :recipes 
  resources :foods 
 
+ get 'home', to: 'static#home'
+
+
   # Defines the root path route ("/")
 
    root "recipes#index"
