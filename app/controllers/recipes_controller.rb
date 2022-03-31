@@ -12,9 +12,7 @@ class RecipesController < ApplicationController
   end
 
   def create
-    @recipe = Recipe.new(name: recipe_params[:name], preparation_time: recipe_params[:preparation_time],
-                         cooking_time: recipe_params[:cooking_time],
-                         description: recipe_params[:description], public: recipe_params[:public])
+    @recipe = Recipe.new(recipe_params.merge(user_id: current_user.id))
     if @recipe.valid? && @recipe.save
       redirect_to user_recipes_path
     else

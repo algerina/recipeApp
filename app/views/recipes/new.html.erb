@@ -1,5 +1,5 @@
 <div>
-  <%= form_with(model: @recipe, url: user_recipes_path, method: :post, local: true) do |form| %>
+  <%= form_with(model: @recipe, url: "/users/#{:user_id}/recipes", method: :post, local: true) do |form| %>
     <%= form.label(:name, "name") %>
     <%= form.text_field :name %>
      <%= form.label(:preparation_time, "Preparation time") %>
