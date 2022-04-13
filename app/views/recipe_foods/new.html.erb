@@ -1,6 +1,6 @@
 <h1>add ingredients</h1>
-<%= form_with(model: @food, url:"/users/#{:user_id}/recipes/#{:recipe_id}/recipe_foods", method: :post, local: true) do |form| %>
-<%= form.select :food_id, options_from_collection_for_select(@foods, "id", "name"), {}, { class: "border rounded" } %> 
+<%= form_with(model: @recipe_food, url: recipe_recipe_foods_url, method: :post, local: true) do |form| %>
+<%= form.select ( :food_id) , options_from_collection_for_select(@foods, "id", "name"), {}, { class: "border rounded" } %> 
   <%= form.label(:quantity, "quantity") %>
     <%= form.number_field :quantity%>
   <%= form.submit "Add ingredient" %>

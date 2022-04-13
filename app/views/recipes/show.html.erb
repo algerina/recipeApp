@@ -3,10 +3,39 @@
 <p><%= @recipe.preparation_time %></p>
 <p><%= @recipe.cooking_time %></p>
 
-    <p><%= @recipe.description %></p>
+
+# <%@recipe.recipe_foods.each do |recipe_food|%>
+
+#     <p><%= Food.find(recipe_food.food_id).name %></p>
+#     <p><%= recipe_food.quantity %></p>
+
+#     <% end %>
+#     <p><%= @recipe.description %></p>
+    <button><%= link_to ("Add ingredient"), new_recipe_recipe_food_path(@recipe.id)%></button>
 
 
-    <button><%= link_to ("Add ingredient"), "/users/#{:user_id}/recipes/#{:recipe_id}/recipe_foods/new"%></button>
-
-
+    <table class="table">
+  <thead>
+    <tr>
+ 
+      <th scope="col">Food</th>
+      <th scope="col">Quantity</th>
+      <th scope="col">Value</th>
+    </tr>
+  </thead>
+  <tbody>
+  <%@recipe.recipe_foods.each do |recipe_food|%>
+    <tr>
     
+
+
+      <td><%= Food.find(recipe_food.food_id).name %></td>
+      <td><%= recipe_food.quantity %></td>
+      <td>price</td>
+     
+      </tr>
+      <% end %>
+  </tbody>
+</table>
+
+

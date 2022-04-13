@@ -2,7 +2,7 @@
 
 
 <div>
-  <%= form_with(model: @food, url: user_recipe_foods_path, method: :post, local: true) do |form| %>
+  <%= form_with(model: @food, url: foods_url, method: :post, local: true) do |form| %>
     <%= form.label(:name, "name") %>
     <%= form.text_field :name %>
      <%= form.label(:measurement_unit, "measurement unit?") %>
